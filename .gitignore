@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.pytest_cache
+*$py.class
+
+# Unit test
+.cache
+.pytest_cache/
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Environments
+.DS_Store
+.venv
+venv/
+.env/
+.env
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# mkdocs documentation
+data/
+results/
+google-cloud-sdk/
+
+# Docker
+docker-compose.override.yml
+*.log
+*.pid
+
+# Google Cloud Ignore
+.gcloudignore
