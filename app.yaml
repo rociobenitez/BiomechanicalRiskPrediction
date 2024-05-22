@@ -7,7 +7,7 @@ env_variables:
   CLOUD_SQL_NAME: "postgresql"
   CLOUD_SQL_USERNAME: "rocio"
   CLOUD_SQL_DATABASE_NAME: "userdb"
-  CLOUD_SQL_PASSWORD: "rocio9396"
+  CLOUD_SQL_PASSWORD: [pass]
   CLOUD_SQL_CONNECTION_NAME: "sistemas-predictivo-lesiones:europe-west1:postgresql"
   CLOUD_SQL_HOST: "34.38.196.5:5432"
 
