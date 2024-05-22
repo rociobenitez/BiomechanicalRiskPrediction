@@ -28,6 +28,9 @@ data/
 results/
 google-cloud-sdk/
 notebooks/mlruns/
+project/data/
+src/utils/__pycache__/
+src/production/
 
 # Docker
 docker-compose.override.yml
