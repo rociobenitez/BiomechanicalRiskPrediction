@@ -111,8 +111,8 @@ Para utilizar este repositorio, puedes seguir estos pasos:
 
 ## Screens App
 
-![](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask04.jpg)
-![](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask05.jpg)
-![](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask03.jpg)
-![](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask02.jpg)
-![](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask01.jpg)
+![Home APP](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask04.jpg)
+![Página Añadir Registro](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask05.jpg)
+![Página del Formulario para evaluar el Riesgo de Lesión](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask03.jpg)
+![Página del Formulario para predecir la edad de marcha](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask01.jpg)
+![Adaptación Responsive](./project/docs/Sprint-5-Optimización_y_Presentación/img/app-flask02.jpg)
