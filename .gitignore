@@ -18,14 +18,16 @@ instance/
 venv/
 .env/
 .env
+etl/spark_env/
 
 # Jupyter Notebooks checkpoints
 .ipynb_checkpoints/
 
-# mkdocs documentation
+# mkdocs
 data/
 results/
 google-cloud-sdk/
+notebooks/mlruns/
 
 # Docker
 docker-compose.override.yml
@@ -33,4 +35,4 @@ docker-compose.override.yml
 *.pid
 
 # Google Cloud Ignore
-.gcloudignore
+.gcloudignorenotebooks/mlruns/
