@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div id="controls"
+        class="controls-container col-12 mt-3 mb-4 d-flex flex-wrap gap-3 justify-content-center align-items-center">
+    </div>
+</div>
+<div class="row">
+    <div id="chart" class="container-chart col-12 text-center"></div>
+</div>
+<div class="row">
+    <div id="bar-chart" class=" col-12 text-center"></div>
+    <div id="weight-range-container" class="text-center"></div>
+</div>
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

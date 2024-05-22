@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+{% include 'header.html' %}
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container border-bottom pb-2">
+            <a class="navbar-brand" href="{{ url_for('routes.home') }}">Inicio</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-end justify-content-end py-4 py-lg-0" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('routes.regression') }}">Modelo de Regresión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('routes.classification') }}">Modelo de Clasificación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('routes.faqs') }}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('routes.d3js') }}">Runners</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary rounded-0" href="{{ url_for('routes.update_database') }}">Añadir
+                            registro</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container mt-3 pb-5 mb-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer class="bg-light text-center fixed-bottom">
+    <div class="container p-3 text-secondary">
+        <small>Desarrollado por <span class="text-primary">Rocío Benítez García</span></small>
+    </div>
+</footer>
+
+</html>

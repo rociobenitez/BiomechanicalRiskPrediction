@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1 class="h3">📁 Subir archivo a Google Cloud Storage</h1>
+</header>
+<section class="mt-4">
+    <form action="/upload-file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="form-control" id="formFile" onchange="checkFileSize()" />
+        <input type="submit" value="Subir">
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</section>
+<script>
+    function checkFileSize() {
+        let file = document.getElementById('file').files[0];
+        if (file.size > 16000000) {  // Tamaño en bytes, 16MB
+            alert('El archivo debe ser menor de 16MB');
+            document.getElementById('file').value = "";  // Resetea el campo del archivo
+        }
+    }
+</script>
+{% endblock %}

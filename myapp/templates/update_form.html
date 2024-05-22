@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1 class="heading-3">Añadir registro</h1>
+</header>
+<section class="mt-4">
+    <small class="mb-4 text-body-secondary">Completa los siguientes campos para introducir un nuevo registro en la base
+        de datos:</small>
+    <form method="post" class="bg-light p-4 mt-4 border rounded">
+        <div class="py-3">
+            <div class="row g-3">
+                <!-- Campos Antropométricos -->
+                <p class="border-bottom h5 pb-2">Datos Personales</p>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" name="edad" step="1" min="15" max="100"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <label for="sexo">Sexo</label>
+                    <select class="form-control" id="sexo" name="sexo" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="1">Masculino</option>
+                        <option value="0">Femenino</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-2">
+                    <label for="altura">Altura (cm)</label>
+                    <input type="number" class="form-control" id="altura" name="altura" min="100" max="250" required>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-2">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" class="form-control" id="peso" name="peso" min="30" max="150" required>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-2">
+                    <label for="num_calzado">Número de calzado</label>
+                    <input type="number" class="form-control" id="num_calzado" name="num_calzado" step="0.5" min="34"
+                        max="50" required>
+                </div>
+                <!-- Campos Zona Afectada -->
+                <p class="border-bottom h5 mt-5 pb-2">Zona</p>
+                <div class="col-12 col-md-4">
+                    <label for="articulacion">Articulación afectada</label>
+                    <select class="form-control" id="articulacion" name="articulacion" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="pie">Pie</option>
+                        <option value="tobillo">Tobillo</option>
+                        <option value="rodilla">Rodilla</option>
+                        <option value="muslo">Muslo</option>
+                        <option value="cadera">Cadera</option>
+                        <option value="espalda">Espalda</option>
+                        <option value="sin afectacion">Sin afectación</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="localizacion">Localización de la lesión</label>
+                    <select class="form-control" id="localizacion" name="localizacion" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="medial">Medial</option>
+                        <option value="lateral">Lateral</option>
+                        <option value="anterior">Anterior</option>
+                        <option value="posterior">Posterior</option>
+                        <option value="plantar proximal">Plantar Proximal</option>
+                        <option value="plantar distal">Plantar Distal</option>
+                        <option value="dorsal">Dorsal</option>
+                        <option value="no especificado">No Especificado</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="lado">Lado de la lesión</label>
+                    <select class="form-control" id="lado" name="lado" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="d">Derecho</option>
+                        <option value="i">Izquierdo</option>
+                        <option value="b">Bilateral</option>
+                        <option value="no especificado">No especificado</option>
+                    </select>
+                </div>
+                <!-- Campos Biomecánicos -->
+                <p class="border-bottom h5 mt-5 pb-2">Runscribe Marcha</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="pace_walk">Pace</label>
+                    <input type="number" class="form-control" id="pace_walk" name="pace_walk" step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="velocidad_walk">Velocidad</label>
+                    <input type="number" class="form-control" id="velocidad_walk" name="velocidad_walk" step="0.0001"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="step_rate_walk">Step Rate</label>
+                    <input type="number" class="form-control" id="step_rate_walk" name="step_rate_walk" step="0.0001"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="stride_length_walk">Stride Length</label>
+                    <input type="number" class="form-control" id="stride_length_walk" name="stride_length_walk"
+                        step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="shock_walk">Shock</label>
+                    <input type="number" class="form-control" id="shock_walk" name="shock_walk" step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="impact_gs_walk">Impact GS</label>
+                    <input type="number" class="form-control" id="impact_gs_walk" name="impact_gs_walk" step="0.0001"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="braking_gs_walk">Braking GS</label>
+                    <input type="number" class="form-control" id="braking_gs_walk" name="braking_gs_walk" step="0.0001"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="footstrike_type_walk">Footstrike Type</label>
+                    <input type="number" class="form-control" id="footstrike_type_walk" name="footstrike_type_walk"
+                        step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="pronation_excursion_walk">Pronation Excursion</label>
+                    <input type="number" class="form-control" id="pronation_excursion_walk"
+                        name="pronation_excursion_walk" step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="contact_ratio_walk">Contact Ratio</label>
+                    <input type="number" class="form-control" id="contact_ratio_walk" name="contact_ratio_walk"
+                        step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="total_force_rate_walk">Total Force Rate</label>
+                    <input type="number" class="form-control" id="total_force_rate_walk" name="total_force_rate_walk"
+                        step="0.0001" required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="step_length_walk">Step Length</label>
+                    <input type="number" class="form-control" id="step_length_walk" name="step_length_walk"
+                        step="0.0001" required>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <label for="pronation_excursion_mp_to_walk">Pronation Excursion (MP->TO)</label>
+                    <input type="number" class="form-control" id="pronation_excursion_mp_to_walk"
+                        name="pronation_excursion_mp_to_walk" step="0.0001" required>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <label for="stance_excursion_fs_mp_walk">Stance Excursion (FS->MP)</label>
+                    <input type="number" class="form-control" id="stance_excursion_fs_mp_walk"
+                        name="stance_excursion_fs_mp_walk" step="0.0001" required>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <label for="stance_excursion_mp_to_walk">Stance Excursion (MP->TO)</label>
+                    <input type="number" class="form-control" id="stance_excursion_mp_to_walk"
+                        name="stance_excursion_mp_to_walk" step="0.0001" required>
+                </div>
+                <!-- Campos Tests Clínicos -->
+                <p class="border-bottom h5 mt-5 pb-2">Resultados Tests Clínicos</p>
+                <small class="text-secondary mt-1">Rellene los siguientes campos con valores del <b>0 al 3</b>,
+                    donde 0 indica un test negativo, 1 indica un test positivo en el miembro de la lesión,
+                    2 un test positivo en el miembro contralateral, y 3 un test positivo bilateral.</small>
+                {% for field in dynamic_fields %}
+                <div class="col-12 col-sm-6 col-md-4 col-l-3">
+                    <label for="{{ field }}">{{ field.replace('_', ' ').title() }}</label>
+                    <select class="form-control" id="{{ field }}" name="{{ field }}" required>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                {% endfor %}
+
+                <!-- Repetir el patrón de select para el resto de campos categóricos 0-3 -->
+                <p class="border-bottom h5 mt-5 pb-2">Foot Posture Index</p>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="fpi_total_i">FPI Total Izquierda</label>
+                    <input type="number" class="form-control" id="fpi_total_i" name="fpi_total_i" min="-12" max="12"
+                        required>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <label for="fpi_total_d">FPI Total Derecha</label>
+                    <input type="number" class="form-control" id="fpi_total_d" name="fpi_total_d" min="-12" max="12"
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 text-end">
+            <button type="submit" class="btn btn-primary">Añadir</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

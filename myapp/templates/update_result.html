@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="message border rounded shadow-sm p-5 my-5 mx-auto">
+    <section class="text-center">
+        <h1 class="h5 text-center">✅ Datos actualizados correctamente</h1>
+        <p>El registro se ha añadido a la <span class="text-primary">base de datos</span></p>
+        <a href="{{ url_for('routes.update_database') }}" class="btn btn-primary">Añadir otro registro</a>
+    </section>
+</div>
+{% endblock %}

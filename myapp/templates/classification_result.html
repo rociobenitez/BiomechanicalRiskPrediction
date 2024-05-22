@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="message border rounded shadow-sm p-5 my-5 mx-auto">
+    <h1 class="h3 text-center">Resultado de la Evaluación de Riesgo de Lesión</h1>
+    <section class="mt-4 text-center">
+        <p class="lead">La probabilidad de que el paciente pertenezca a la categoría <span
+                class="text-primary text-capitalize"><strong>{{ predicted_class }}</strong></span> es
+            del <span class="text-primary"><strong>{{ (max_probability*100)|round(2) }}%</strong></span>.</p>
+        <a href="{{ url_for('routes.classification') }}" class="btn btn-primary mt-2">Realizar Otra Evaluación</a>
+    </section>
+</div>
+<canvas id="riskChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var probabilities = {{ probabilities| tojson }};
+    var classes = {{ classes| tojson }};
+    console.log(classes);
+    var ctx = document.getElementById('riskChart').getContext('2d');
+    var riskChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: classes,
+            datasets: [{
+                label: 'Probabilidad de Riesgo (%)',
+                data: probabilities,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

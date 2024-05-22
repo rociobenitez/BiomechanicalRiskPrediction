@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="message border rounded shadow-sm p-5 my-5 mx-auto">
+    <h1 class="h3 text-center">Resultado</h1>
+    <section class="mt-4 text-center">
+        <p class="h4">¡Tu edad de marcha es de <span class="text-primary">{{ predicted_age }}</span> años!</p>
+        <p>Este número refleja cómo tu biomecánica se compara con patrones típicos de diferentes edades. <br>¿Te
+            sientes más joven o más viejo?</p>
+        <a href="{{ url_for('routes.regression') }}" class="btn btn-primary mt-3">Volver a Probar</a>
+    </section>
+</div>
+{% endblock %}

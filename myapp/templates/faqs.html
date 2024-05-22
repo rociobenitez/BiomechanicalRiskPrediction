@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1 class="heading-3">Resolvemos tus dudas</h1>
+</header>
+<div class="accordion block-faqs mt-5" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                aria-expanded="true" aria-controls="collapse1">
+                <p>1. ¿Qué es la "edad de marcha"?</p>
+            </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>La <b>"edad de marcha"</b> es un indicador biomecánico que compara tus patrones de movimiento con los
+                    de diferentes edades. Este test te permite conocer cómo se compara tu condición física actual con la
+                    de una persona promedio de tu misma edad, o si tu cuerpo se comporta como el de una persona más
+                    joven o más mayor en términos de movimiento y actividad.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                <p>2. ¿Cómo funciona el test de "edad de marcha"?</p>
+            </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>El test de "edad de marcha" utiliza un modelo predictivo de machine learning que analiza los datos
+                    que introduces en el formulario. Basado en esos datos, el modelo calcula una "edad de marcha" que
+                    refleja tu condición biomecánica.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <p>3. ¿Qué datos necesito proporcionar para obtener mi "edad de marcha"?</p>
+            </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Necesitarás completar un formulario con información sobre tu IMC (Índice de Masa Corporal) y varios
+                    parámetros relacionados con tu movimiento, como el tipo de pisada o la longitud de zancada, entre
+                    otros.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                <p>4. ¿Qué es un modelo predictivo de machine learning?</p>
+            </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Un modelo predictivo de machine learning es un algoritmo que analiza datos históricos para hacer
+                    predicciones sobre nuevos datos. En el caso de nuestra aplicación, el modelo ha sido entrenado con
+                    datos biomecánicos de personas de diferentes edades para poder predecir tu "edad de marcha" y el
+                    riesgo de lesión.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                <p>5. ¿Qué significa el porcentaje de riesgo de lesión?</p>
+            </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>El <b>porcentaje de riesgo de lesión</b> indica la probabilidad de que una articulación específica
+                    del miembro inferior sufra una lesión, basado en los datos que introduces en el <a
+                        href="{{ url_for('routes.classification') }}">formulario</a>. Este cálculo se realiza utilizando
+                    un
+                    modelo de clasificación entrenado con datos de lesiones y factores de riesgo conocidos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                <p>6. ¿Cómo puedo interpretar los resultados del riesgo de lesión?</p>
+            </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Un porcentaje alto sugiere que hay un mayor riesgo de lesión en la articulación especificada,
+                    mientras que un porcentaje bajo indica un menor riesgo. Estos resultados pueden ser útiles para
+                    identificar áreas de tu cuerpo que pueden necesitar más atención o fortalecimiento.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                <p>7. ¿Es seguro proporcionar mis datos personales en la aplicación?</p>
+            </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Nos tomamos muy en serio la privacidad y la seguridad de tus datos. Todos los datos que proporcionas
+                    son utilizados únicamente para los fines de los modelos predictivos y no son compartidos con
+                    terceros sin tu consentimiento.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                <p>8. ¿Puedo utilizar la aplicación si no soy personal sanitario?</p>
+            </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Sí, actualmente la aplicación está abierta a todos los usuarios para testeo. Sin embargo, la
+                    funcionalidad de añadir nuevos registros está principalmente diseñada para ser utilizada por
+                    personal sanitario.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading9">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                <p>9. ¿Cómo se añaden nuevos registros?</p>
+            </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Para añadir nuevos registros, simplemente completa el formulario con los datos necesarios y envíalo.
+                    Esta funcionalidad permite al personal sanitario agregar información de nuevos pacientes o
+                    actualizar la información existente.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading10">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                <p>10. ¿Cómo se entrenan los modelos predictivos?</p>
+            </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Los modelos predictivos se entrenan utilizando grandes conjuntos de datos históricos que contienen
+                    información sobre patrones de movimiento y lesiones. Estos datos son procesados por algoritmos de
+                    machine learning para aprender a identificar patrones y hacer predicciones precisas sobre nuevos
+                    datos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading11">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                <p>11. ¿Puedo ver mis resultados anteriores?</p>
+            </button>
+        </h2>
+        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>Actualmente, la aplicación no guarda los resultados históricos de los usuarios. Cada vez que realizas
+                    el test, obtienes un nuevo resultado basado en los datos actuales que proporcionas.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

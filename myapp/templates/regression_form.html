@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <h1 class="heading-3">¿Cuál es tu Edad de Marcha?</h1>
+    <p>Descubre cómo tu manera de caminar podría estar diciendo más sobre tu salud de lo que crees.</p>
+</header>
+<section class="mt-4">
+    <small class="mb-4 text-body-secondary">Completa los siguientes campos si quieres conocer tu "edad de marcha". Este
+        divertido test
+        <strong>mide tu condición biomecánica comparándola con patrones de edad</strong>. Es como
+        conocer la edad de tu cuerpo desde un punto de vista de movimiento y actividad: un indicador que muestra
+        cómo estás "envejeciendo". ¿Estás listo para ver si tus pasos son más jóvenes o más viejos que tu edad
+        real?
+    </small>
+    <form method="post" class="bg-light p-4 mt-4 border rounded">
+        <div class="py-3">
+            <div class="row g-3">
+                <div class="col-12 col-md-5">
+                    <label for="stepLength">Step Length (Longitud de zancada)</label>
+                    <input type="number" class="form-control" id="stepLength" name="step length" step="0.001" min="0"
+                        max="10" required>
+                    <div class="form-text">Ejemplo: 0.821</div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <label for="totalForceRate">Total Force Rate</label>
+                    <input type="number" class="form-control" id="totalForceRate" name="total force rate" min="5"
+                        max="60" step="0.001" required>
+                    <div class="form-text">Ejemplo: 25.914</div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <label for="footstrikeType">Footstrike Type</label>
+                    <input type="number" class="form-control" id="footstrikeType" name="footstrike type" min="1"
+                        max="20" step="0.001" required>
+                    <div class="form-text">Ejemplo: 10.276</div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <label for="stanceExcursion">Stance Excursion (MP->TO)</label>
+                    <input type="number" class="form-control" id="stanceExcursion" name="stance excursion" min="30"
+                        max="100" step="0.001" required>
+                    <div class="form-text">Ejemplo: 62.315</div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <label for="imc">IMC</label>
+                    <input type="number" class="form-control" id="imc" name="imc" step="0.1" min="10" max="50" required>
+                    <div class="form-text">Ejemplo: 20.2</div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 text-end">
+            <button type="submit" class="btn btn-primary border-0">Predecir</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,140 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+label {
+    font-size: 0.94rem;
+}
+
+.form-text,
+.form-control {
+    font-size: 0.8rem !important;
+}
+
+.message {
+    max-width: 500px;
+}
+
+.card img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.card-body {
+    max-width: 500px;
+    margin: auto;
+}
+
+.main-text-select,
+.heading-3 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.25px;
+}
+
+.main-text-select {
+    line-height: 130%;
+    margin-bottom: 3rem;
+}
+
+.card-title {
+    font-weight: 700;
+    letter-spacing: -0.1px;
+}
+
+.block-faqs button p {
+    font-weight: 500;
+}
+
+
+/* D3.js */
+.container-chart svg {
+    margin: auto;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.tooltip {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 12px;
+    background: #ffffff;
+    border: 0px;
+    border-radius: 2px;
+    pointer-events: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip p {
+    font: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+.container-chart text {
+    font-size: 13px;
+}
+
+.container-chart .tick text {
+    font-size: 10px;
+    color: #637381;
+}
+
+.controls-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    width: auto !important;
+    margin: auto !important;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.controls-container label {
+    font-size: 0.85rem;
+}
+
+.controls-container input[type="checkbox"] {
+    margin-left: 6px;
+}
+
+#weight-range {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#weight-range-value {
+
+    font-weight: 500;
+}
